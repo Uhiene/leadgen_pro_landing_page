@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>LeadGen Pro</title>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <nav class="site-nav">
+            <div>
+                <h1 class="logo">LeadGen Pro</h1>
+            </div>
+            <button class="sign-up-btn">Sign Up</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Generate more leads with a professional landing page!</h1>
+            <form class="email-form" action="#" method="POST">
+                <input type="email" class="email-input" id="emailInput" placeholder="Email Address" required>    
+                <span id="emailError" style="color:red; display:none;">Email Address Email is not valid.</span>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features-section">
+        <div class="feature">
+            <img src="/images/icons/devices.svg" alt="" class="feature-img">
+            <h2 class="feature-title">Fully Responsive </h2>
+            <p class="feature-description">This theme will look great on any device, no matter the size!</p>
+        </div>
+        <div class="feature">
+            <img src="/images/icons/layers.svg" alt="" class="feature-img">
+            <h2 class="feature-title"> Bootstrap 5 Ready</h2>
+
+            <p class="feature-description">Featuring the latest build of the new Bootstrap 5 framework!</p>
+        </div>
+        <div class="feature">
+            <img src="/images/icons/thumb_up.svg" alt="" class="feature-img">
+            <h2 class="feature-title">
+                Easy to Use
+            </h2>
+            <p class="feature-description"> Ready to use with your own content, or customize the source files!</p>
+        </div>
+    </section>
+
+    <!-- Feature highlights section -->
+    <section class="feature-highlights">
+        <div class="highlights">
+            <img src="/images/img/bg-showcase-1.jpg" alt="" class="highlights-img">
+            <div class="highlights-content">
+                <h2 class="highlights-title">Fully Responsive Design</h2>
+                <p class="highlights-desc">
+                    When you use a theme created by Start Bootstrap, you know that the theme will look great on any
+                    device, whether it's a phone, tablet, or desktop the page will behave responsively!
+                </p>
+            </div>
+        </div>
+        <div class="highlights highlights-2">
+            <img src="/images/img/bg-showcase-2.jpg" alt="" class="highlights-img">
+            <div class="highlights-content">
+                <h2 class="highlights-title"> Updated For Bootstrap 5</h2>
+                <p class="highlights-desc">
+                    Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile
+                    responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!
+                </p>
+            </div>
+        </div>
+        <div class="highlights">
+            <img src="/images/img/bg-showcase-3.jpg" alt="" class="highlights-img">
+            <div class="highlights-content">
+                <h2 class="highlights-title">Easy to Use & Customize</h2>
+                <p class="highlights-desc">
+                    Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper
+                    customization options. Out of the box, just add your content and images, and your new landing page
+                    will be ready to go!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h1>What people are saying...</h1>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="/images/img/testimonials-1.jpg" alt="" class="testimonial-img">
+                <h2 class="testimonial-name">Margaret E.</h2>
+                <p class="testimonial-quote">"This is fantastic! Thanks so much guys!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="/images/img/testimonials-2.jpg" alt="" class="testimonial-img">
+                <h2 class="testimonial-name">Fred S.</h2>
+                <p class="testimonial-quote">"Bootstrap is amazing. I've been using it to create lots of super nice
+                    landing pages."</p>
+            </div>
+            <div class="testimonial">
+                <img src="/images/img/bg-showcase-3.jpg" alt="" class="testimonial-img">
+                <h2 class="testimonial-name">Margaret E.</h2>
+                <p class="testimonial-quote">"Thanks so much for making these free resources available to us!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="signup-section">
+        <div>
+            <h2 class="signup-title">Ready to get started? Sign up now!</h2>
+            <form class="email-form" action="#" method="POST">
+                <input type="email" class="email-input" placeholder="Email Address" required>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <ul class="footer-links">
+                <li>About </li>
+                <li>Contact</li>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <i class="fa-brands fa-facebook" style="color: #0D6EFD;"></i>
+            <i class="fa-brands fa-twitter" style="color: #0D6EFD;"></i>
+            <i class="fa-brands fa-instagram" style="color: #0D6EFD;"></i>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('emailInput').addEventListener('input', function () {
+            var email = document.getElementById('emailInput').value;
+            var isValid = /\S+@\S+\.\S+/.test(email); // Simple regex for basic email validation
+            var errorMessage = document.getElementById('emailError');
+
+            if (!isValid) {
+                errorMessage.style.display = 'inline';
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
